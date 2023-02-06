@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@prisma/client": "^4.9.0",
+    "firebase": "^9.17.1",
     "nuxt": "^3.0.0",
     "prisma": "^4.9.0",
     "sass": "^1.57.1",
