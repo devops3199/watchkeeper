@@ -1,14 +1,10 @@
 <script setup lang="ts">
-const { data } = await useAsyncData("users", () => $fetch("/api/user"));
+const { loginWithGoogle } = useAuth();
 </script>
 <template>
   <NuxtLayout name="default">
     <div>
-      <h1>Home</h1>
-    </div>
-    <div>
-      <h2>Data</h2>
-      <p v-if="data">{{ data[0].name }}</p>
+      <button @click="loginWithGoogle">구글 로그인</button>
     </div>
   </NuxtLayout>
 </template>
