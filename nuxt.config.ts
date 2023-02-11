@@ -20,7 +20,10 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ["~/assets/scss/_global.scss"],
+  css: ["~/assets/scss/_global.scss", "vuetify/lib/styles/main.sass"],
+  build: {
+    transpile: ["vuetify"],
+  },
   runtimeConfig: {
     public: {
       fbApiKey: process.env.FB_API_KEY,
