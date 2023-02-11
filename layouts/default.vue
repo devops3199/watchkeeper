@@ -1,5 +1,6 @@
 <script setup lang="ts"></script>
 <template>
+  <pinned-messages>안녕하세요. 서비스 개발 중 입니다.</pinned-messages>
   <div class="default-layout">
     <div class="content">
       <slot />
