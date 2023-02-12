@@ -14,5 +14,6 @@
   height: 40px;
   color: #fff;
   background-color: #1187cf;
+  user-select: none;
 }
 </style>
