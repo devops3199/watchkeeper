@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "와치 키퍼 | 시계 생활 같이 해요",
+      title: "와치키퍼",
       link: [
         {
           rel: "preconnect",
