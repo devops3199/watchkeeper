@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { loginViaGoogle } = useAuth();
+const { loginViaGoogle, logout } = useAuth();
 </script>
 <template>
   <div class="navbar">
@@ -25,6 +25,9 @@ const { loginViaGoogle } = useAuth();
           variant="outlined"
           @click="loginViaGoogle"
           >로그인</v-btn
+        >
+        <v-btn class="logout" variant="outlined" @click="logout"
+          >로그아웃</v-btn
         >
       </div>
     </div>
