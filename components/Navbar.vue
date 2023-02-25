@@ -76,7 +76,7 @@ const handleLogout = async () => {
   <!-- 로그인 스낵바 -->
   <v-snackbar
     v-model="isOpen.loginSuccess"
-    :timeout="1500"
+    :timeout="3000"
     color="primary"
     variant="tonal"
   >
@@ -100,12 +100,12 @@ const handleLogout = async () => {
 <style lang="scss" scoped>
 .navbar {
   width: 100%;
-  height: 80px;
 
   &__content {
     display: flex;
     align-items: center;
     max-width: 1080px;
+    height: 80px;
     padding: 16px;
     margin: 0 auto;
   }

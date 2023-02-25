@@ -10,19 +10,13 @@ export default function () {
 
     const result = await signInWithPopup($auth, provider);
 
-    const credential = GoogleAuthProvider.credentialFromResult(result);
+    // const credential = GoogleAuthProvider.credentialFromResult(result);
 
     user.value = {
       name: result.user.displayName ?? '익명',
       email: result.user.email ?? undefined,
       role: 'user',
     };
-
-    console.log({
-      credential,
-      token: credential?.accessToken,
-      user: result.user,
-    });
   };
 
   const logout = async () => {
