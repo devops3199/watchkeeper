@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { loginViaGoogle, logout } = useAuth();
+const {loginViaGoogle, logout} = useAuth();
 const user = useUser();
 
 const isOpen = reactive({
@@ -30,9 +30,15 @@ const handleLogout = async () => {
         </NuxtLink>
       </div>
       <ul class="menu">
-        <li><NuxtLink to="/about">소개</NuxtLink></li>
-        <li><NuxtLink to="/brands">시계 브랜드</NuxtLink></li>
-        <li><NuxtLink to="/community">커뮤니티</NuxtLink></li>
+        <li>
+          <NuxtLink to="/about"> 소개 </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/brands"> 시계 브랜드 </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/community"> 커뮤니티 </NuxtLink>
+        </li>
       </ul>
       <div class="login-btns">
         <v-btn
@@ -41,12 +47,15 @@ const handleLogout = async () => {
           prepend-icon="mdi-google"
           variant="outlined"
           @click="handleLogin"
-          >로그인</v-btn
         >
+          로그인
+        </v-btn>
         <div v-else class="after-auth-wrapper">
           <v-btn class="my-info" variant="flat" icon>
             <v-icon>mdi-account</v-icon>
-            <v-tooltip activator="parent" location="bottom">내 정보</v-tooltip>
+            <v-tooltip activator="parent" location="bottom">
+              내 정보
+            </v-tooltip>
           </v-btn>
           <v-btn
             class="logout"
@@ -55,13 +64,15 @@ const handleLogout = async () => {
             @click="isOpen.logoutModal = true"
           >
             <v-icon>mdi-logout-variant</v-icon>
-            <v-tooltip activator="parent" location="bottom">로그아웃</v-tooltip>
+            <v-tooltip activator="parent" location="bottom">
+              로그아웃
+            </v-tooltip>
           </v-btn>
         </div>
       </div>
     </div>
   </div>
-  <v-divider></v-divider>
+  <v-divider />
   <!-- 로그인 스낵바 -->
   <v-snackbar
     v-model="isOpen.loginSuccess"
@@ -71,7 +82,7 @@ const handleLogout = async () => {
   >
     {{ user?.name }}님 환영합니다
 
-    <template v-slot:actions>
+    <template #actions>
       <v-btn variant="text" @click="isOpen.loginSuccess = false"> 닫기 </v-btn>
     </template>
   </v-snackbar>
@@ -80,8 +91,8 @@ const handleLogout = async () => {
     <v-card>
       <v-card-text> 정말 로그아웃 하시겠습니까? </v-card-text>
       <v-card-actions class="modal-btns">
-        <v-btn @click="handleLogout">로그아웃</v-btn>
-        <v-btn @click="isOpen.logoutModal = false">취소</v-btn>
+        <v-btn @click="handleLogout"> 로그아웃 </v-btn>
+        <v-btn @click="isOpen.logoutModal = false"> 취소 </v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>

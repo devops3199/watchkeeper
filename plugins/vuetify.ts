@@ -1,14 +1,14 @@
-import "@mdi/font/css/materialdesignicons.css";
-import { createVuetify } from "vuetify";
-import * as components from "vuetify/components";
-import * as directives from "vuetify/directives";
-import { aliases, mdi } from "vuetify/iconsets/mdi";
+import '@mdi/font/css/materialdesignicons.css';
+import {createVuetify} from 'vuetify';
+import * as components from 'vuetify/components';
+import * as directives from 'vuetify/directives';
+import {aliases, mdi} from 'vuetify/iconsets/mdi';
 
 export default defineNuxtPlugin((NuxtApp) => {
   const myTheme = {
     dark: false,
     colors: {
-      primary: "#1187cf",
+      primary: '#1187cf',
     },
   };
 
@@ -17,14 +17,14 @@ export default defineNuxtPlugin((NuxtApp) => {
     directives,
     ssr: true,
     icons: {
-      defaultSet: "mdi",
+      defaultSet: 'mdi',
       aliases,
       sets: {
         mdi,
       },
     },
     display: {
-      mobileBreakpoint: "sm",
+      mobileBreakpoint: 'sm',
       thresholds: {
         xs: 0,
         sm: 340,
@@ -34,8 +34,8 @@ export default defineNuxtPlugin((NuxtApp) => {
       },
     },
     theme: {
-      defaultTheme: "myTheme",
-      themes: { myTheme },
+      defaultTheme: 'myTheme',
+      themes: {myTheme},
     },
   });
 

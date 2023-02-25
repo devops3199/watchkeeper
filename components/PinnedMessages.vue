@@ -3,7 +3,7 @@
   <div class="pinned-message">
     <slot />
   </div>
-  <v-divider></v-divider>
+  <v-divider />
 </template>
 <style lang="scss" scoped>
 .pinned-message {

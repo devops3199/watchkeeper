@@ -2,27 +2,27 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "와치키퍼",
+      title: '와치키퍼',
       link: [
         {
-          rel: "preconnect",
-          href: "https://fonts.googleapis.com",
+          rel: 'preconnect',
+          href: 'https://fonts.googleapis.com',
         },
         {
-          rel: "preconnect",
-          href: "https://fonts.gstatic.com",
-          crossorigin: "anonymous",
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossorigin: 'anonymous',
         },
         {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap",
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap',
         },
       ],
     },
   },
-  css: ["~/assets/scss/_global.scss", "vuetify/lib/styles/main.sass"],
+  css: ['~/assets/scss/_global.scss', 'vuetify/lib/styles/main.sass'],
   build: {
-    transpile: ["vuetify"],
+    transpile: ['vuetify'],
   },
   runtimeConfig: {
     public: {

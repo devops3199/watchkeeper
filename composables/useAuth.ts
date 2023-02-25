@@ -1,8 +1,8 @@
-import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
-import { useUser } from "./useUser";
+import {GoogleAuthProvider, signInWithPopup, signOut} from 'firebase/auth';
+import {useUser} from './useUser';
 
 export default function () {
-  const { $auth } = useNuxtApp();
+  const {$auth} = useNuxtApp();
   const user = useUser();
 
   const loginViaGoogle = async () => {
@@ -13,9 +13,9 @@ export default function () {
     const credential = GoogleAuthProvider.credentialFromResult(result);
 
     user.value = {
-      name: result.user.displayName ?? "익명",
+      name: result.user.displayName ?? '익명',
       email: result.user.email ?? undefined,
-      role: "user",
+      role: 'user',
     };
 
     console.log({
