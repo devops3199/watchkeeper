@@ -8,4 +8,11 @@
     </div>
   </div>
 </template>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.default-layout {
+  margin: 0 auto;
+}
+.content {
+  max-width: 1080px;
+}
+</style>
