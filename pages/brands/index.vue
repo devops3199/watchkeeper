@@ -1,28 +1,7 @@
 <script setup lang="ts">
-import {Brand} from '@/model/brand';
+const {getBrands} = useDocs();
 
-const brands: Array<Brand> = [
-  {
-    engName: 'Tudor',
-    korName: '튜더',
-    website: 'https://www.tudorwatch.com/ko',
-    wiki: 'https://namu.wiki/w/TUDOR',
-    thumbnail: '',
-  },
-  {
-    engName: 'Longines',
-    korName: '론진',
-    website: 'https://www.longines.com/kr/',
-    wiki: 'https://namu.wiki/w/Longines',
-    thumbnail: '',
-  },
-  {
-    engName: 'IWC',
-    website: 'https://www.iwc.com/kr/ko/home.html',
-    wiki: 'https://namu.wiki/w/IWC',
-    thumbnail: '',
-  },
-];
+const brands = await getBrands();
 </script>
 <template>
   <NuxtLayout name="default">
