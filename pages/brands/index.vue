@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const {getBrands} = useDocs();
-
-const brands = await getBrands();
+const {data: brands} = useAsyncData(getBrands);
 </script>
 <template>
   <NuxtLayout name="default">
