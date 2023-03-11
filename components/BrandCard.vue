@@ -38,7 +38,7 @@ const {data} = toRefs(props);
   height: 150px;
 
   img {
-    height: 100px;
+    height: 75px;
   }
 }
 
