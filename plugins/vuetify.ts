@@ -9,6 +9,7 @@ export default defineNuxtPlugin((NuxtApp) => {
     dark: false,
     colors: {
       primary: '#1187cf',
+      secondary: '#ff9800',
     },
   };
 
