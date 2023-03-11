@@ -71,8 +71,8 @@ const handleLogout = async () => {
         </div>
       </div>
     </div>
+    <v-divider />
   </div>
-  <v-divider />
   <!-- 로그인 스낵바 -->
   <v-snackbar
     v-model="isOpen.loginSuccess"
@@ -99,7 +99,11 @@ const handleLogout = async () => {
 </template>
 <style lang="scss" scoped>
 .navbar {
+  position: sticky;
+  top: 0;
   width: 100%;
+  background-color: #fff;
+  z-index: 900;
 
   &__content {
     display: flex;
