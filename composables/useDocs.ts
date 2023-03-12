@@ -1,4 +1,4 @@
-import {collection, getDocs} from 'firebase/firestore';
+import {doc as fbDoc, collection, getDocs, getDoc} from 'firebase/firestore';
 import {Brand} from '@/model/brand';
 
 export default function () {
@@ -6,6 +6,7 @@ export default function () {
   const isFetching = ref(false);
 
   const brandsRef = collection($firestore, 'brands');
+  const pinnedMessagesRef = fbDoc($firestore, 'messages', 'pinned');
 
   const getBrands = async () => {
     const result: Array<Brand> = [];
@@ -26,5 +27,22 @@ export default function () {
     return result;
   };
 
-  return {getBrands, isFetching};
+  const getPinnedMessage = async () => {
+    let result = '';
+
+    try {
+      isFetching.value = true;
+      const doc = await getDoc(pinnedMessagesRef);
+
+      result = (doc.data() as {content: string}).content;
+    } catch (e) {
+      console.error({catch: e});
+    } finally {
+      isFetching.value = false;
+    }
+
+    return result;
+  };
+
+  return {getBrands, getPinnedMessage, isFetching};
 }

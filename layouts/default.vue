@@ -1,7 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const {getPinnedMessage} = useDocs();
+const {data: message} = useAsyncData(getPinnedMessage);
+</script>
 <template>
-  <pinned-messages>안녕하세요. 서비스 개발 중 입니다.</pinned-messages>
-  <navbar></navbar>
+  <PinnedMessages v-if="message">{{ message }}</PinnedMessages>
+  <Navbar></Navbar>
   <div class="default-layout">
     <div class="content">
       <slot />
