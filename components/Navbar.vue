@@ -31,13 +31,17 @@ const handleLogout = async () => {
       </div>
       <ul class="menu">
         <li>
-          <NuxtLink to="/about"> 소개 </NuxtLink>
+          <NuxtLink to="/about" active-class="current-page"> 소개 </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/brands"> 시계 브랜드 </NuxtLink>
+          <NuxtLink to="/brands" active-class="current-page">
+            시계 브랜드
+          </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/community"> 커뮤니티 </NuxtLink>
+          <NuxtLink to="/community" active-class="current-page">
+            커뮤니티
+          </NuxtLink>
         </li>
       </ul>
       <div class="login-btns">
@@ -150,7 +154,20 @@ const handleLogout = async () => {
 
   a {
     text-decoration: none;
-    color: #222;
+    color: #71717a;
+    padding: 8px 12px;
+  }
+
+  a:hover {
+    color: #18181b;
+    font-weight: 600;
+  }
+
+  .current-page {
+    color: #18181b;
+    font-weight: 600;
+    background-color: #f4f4f5;
+    border-radius: 6px;
   }
 }
 
