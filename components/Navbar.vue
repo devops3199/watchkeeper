@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const {loginViaGoogle, logout} = useAuth();
 const user = useUser();
+const router = useRouter();
 
 const isOpen = reactive({
   logoutModal: false,
@@ -55,7 +56,12 @@ const handleLogout = async () => {
           로그인
         </v-btn>
         <div v-else class="after-auth-wrapper">
-          <v-btn class="my-info" variant="flat" icon>
+          <v-btn
+            class="my-info"
+            variant="flat"
+            icon
+            @click="router.push({path: '/my'})"
+          >
             <v-icon>mdi-account</v-icon>
             <v-tooltip activator="parent" location="bottom">
               내 정보
